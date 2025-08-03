@@ -8,8 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Mail, Lock, User } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { GoogleSignInButton } from "@/components/GoogleSignInButton";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useAuth } from '@/contexts/AuthContext';
@@ -157,6 +159,16 @@ const Signup = () => {
                 </Button>
               </form>
             </Form>
+            
+            <div className="mt-6">
+              <Separator className="my-4" />
+              <div className="text-center text-sm text-muted-foreground mb-4">
+                Or continue with
+              </div>
+              <GoogleSignInButton>
+                Sign up with Google
+              </GoogleSignInButton>
+            </div>
           </CardContent>
           <CardFooter className="flex justify-center">
             <p className="text-sm text-muted-foreground">
